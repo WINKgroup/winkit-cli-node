@@ -117,3 +117,4 @@ dist
 ############################
 
 packages/*/yarn.lock
+test-winkit-node

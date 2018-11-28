@@ -1,14 +1,15 @@
 {
-  "name": "winkit-node",
+  "name": "winkit-node-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "./lib",
+  "description": "Winkit Node CLI",
+  "main": "index.js",
   "scripts": {
+      "start" : "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "commander": "^2.19.0"
   }
 }
