@@ -10,6 +10,9 @@ const targets = {
     },
     ':appFolder/api/:folderName/model.js':{
         template: 'model.template'
+    },
+    ':appFolder/api/:folderName/config.settings.json':{
+        template: 'config.json.template'
     }
 };
 
@@ -24,8 +27,11 @@ module.exports = function (name, cliArgs) {
         appFolder : appFolder,
         folderName : name,
         modelName: modelName,
+        modelNameLower: modelName.toLowerCase(),
         templateFolder: template_dir,
-        templateOptions: { modelName : modelName}
+        templateOptions: { modelName : modelName,
+            modelNameLower: modelName.toLowerCase(),
+        }
     };
 
     generator(targets, scope, (err) => {
