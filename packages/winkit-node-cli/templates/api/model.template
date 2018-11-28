@@ -1,0 +1,6 @@
+
+class <%= modelName %> {
+
+};
+
+module.exports = new <%= modelName %>();

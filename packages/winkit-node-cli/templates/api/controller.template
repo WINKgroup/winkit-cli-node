@@ -1,0 +1,11 @@
+'use strict';
+
+/**
+ * <%= modelName %> controller
+ *
+ * @type {{list: module.exports.list}}
+ */
+module.exports = {
+    list: () => {
+    }
+};

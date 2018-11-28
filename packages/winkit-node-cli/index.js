@@ -15,4 +15,11 @@ program
     .description("Init Node Rest project")
     .action(require('./helpers/init'));
 
+program
+    .command('generate:api <name>')
+    .description('Generate API endpoint')
+    .action((name, cliArgs) => {
+        require('./helpers/api')(name, cliArgs);
+    });
+
 program.parse(process.argv);
