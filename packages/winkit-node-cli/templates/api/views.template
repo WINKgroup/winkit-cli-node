@@ -1,6 +1,12 @@
 'use strict';
 
+const controller = require('./controller');
+
 module.exports = {
-    list: () => {
+    list:  async (request, response) => {
+        response.send( await controller.list());
+    },
+    retrieve: async ( request, response) => {
+        response.send( await controller.retrieve(request.params.id) );
     }
 };

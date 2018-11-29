@@ -1,11 +1,19 @@
 'use strict';
+const WinkitController = require('winkit-node/lib/core/controllers/controller');
+
+const <%= modelName %> = require('./model');
 
 /**
  * <%= modelName %> controller
- *
- * @type {{list: module.exports.list}}
  */
-module.exports = {
-    list: () => {
+
+class <%= modelName %>Controller extends  WinkitController{
+
+    constructor(){
+        super();
+        this.model = <%= modelName %>;
     }
-};
+
+}
+
+module.exports = new <%= modelName %>Controller();
