@@ -1,19 +1,34 @@
 'use strict';
 
-const {src, dest} = require('gulp');
+const generator = require("../lib/generator");
 
 const targets = {
-    '.env': {
+    'config/.env': {
         template: 'env.template'
+    },
+    'config/settings.json': {
+        template: 'settings.json.template'
+    },
+    'package.json': {
+        template: 'package.json.template'
+    },
+    'server.js': {
+        template: 'server.js.template'
     }
-}
+};
 
 
 module.exports = function (cliArguments) {
-    const appDir = process.cwd();
-    const template_dir = __dirname +"/../templates";
+    const appFolder = process.cwd();
+    const template_dir = __dirname +"/../templates/init";
 
-    src(template_dir+"/*.js").pipe(dest(appDir)).on('error', (err) => {
-        console.log(err);
+    const scope = {
+        appFolder : appFolder,
+        templateFolder: template_dir,
+        templateOptions: { appName : "test app"}
+    };
+
+    generator(targets, scope, (err) => {
+        //console.log(err);
     });
 };
