@@ -8,5 +8,8 @@ module.exports = {
     },
     retrieve: async ( request, response) => {
         response.send( await controller.retrieve(request.params.id) );
+    },
+    post: async (request, response) => {
+        response.send( await  controller.post(request.body));
     }
 };

@@ -1,6 +1,15 @@
+'use strict';
 
-class <%= modelName %> {
+const path = require("path");
+const MongooseModel = require('winkit-node/lib/core/models/mongooseModel');
+const {readJson} = require('winkit-node/lib/core/helpers/jsonHelper');
 
+const <%= modelName %>Schema = readJson(path.resolve(__dirname,'model.settings.json'));
+
+class <%= modelName %> extends MongooseModel{
+    constructor(){
+        super('<%= modelName %>', <%= modelName %>Schema);
+    }
 };
 
 module.exports = new <%= modelName %>();

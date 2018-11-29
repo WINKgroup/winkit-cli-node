@@ -1,8 +1,9 @@
 'use strict';
 
 const express = require('express');
+const bodyParser = require('body-parser');
 
-const {apis, settings} = require('./core');
+const {apis, settings, database} = require('./core');
 
 const port = 3000;
 
@@ -15,9 +16,12 @@ class Winkit {
             appRootDir : process.cwd(),
             configEnv: '.env' //TODO: make configurable
         }
+
+        this.app.use(bodyParser.json());
     }
     async init(){
         await settings.call(this);
+        await database.call(this);
         await apis.call(this);
     }
 

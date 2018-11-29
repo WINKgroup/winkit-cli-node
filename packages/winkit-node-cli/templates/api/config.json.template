@@ -10,6 +10,11 @@
         "method": "GET",
         "urlPath": "/:id",
         "handler": "retrieve"
+    },
+    {
+        "method": "POST",
+        "urlPath": "/",
+        "handler": "post"
     }
 ]
 }

@@ -6,12 +6,17 @@ class WinkitController{
     }
 
     async list() {
+        console.log(this.request)
         return [{"my" : "god"}];
     }
 
     async retrieve(id){
-        console.log(this.model)
         return {"my":"god", "id": id};
+    }
+
+    async post(params){
+        let instance = await this.model.create(params);
+        return instance;
     }
 }
 

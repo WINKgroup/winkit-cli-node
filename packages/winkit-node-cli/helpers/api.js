@@ -13,6 +13,9 @@ const targets = {
     },
     ':appFolder/api/:folderName/config.settings.json':{
         template: 'config.json.template'
+    },
+    ':appFolder/api/:folderName/model.settings.json':{
+        template: 'model.settings.json.template'
     }
 };
 

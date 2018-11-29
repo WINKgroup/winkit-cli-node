@@ -20,8 +20,10 @@ module.exports = function () {
 
         let settings = JSON.parse(fs.readFileSync(settingsPath, 'utf8'));
 
-        this.config.settings = {}
+        this.config.settings = {};
         Object.assign(this.config.settings, settings);
+
+        this.config.settings['databaseUrl'] = `${this.config.settings.database.type}://${this.config.settings.database.host}:${this.config.settings.database.port}/${this.config.settings.database.name}`;
 
         resolve();
     }));

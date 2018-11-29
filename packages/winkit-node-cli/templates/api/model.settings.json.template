@@ -1,0 +1,5 @@
+{
+    "attributes": {
+      "example_attr" : { "type": "string"}
+    }
+}
