@@ -29,6 +29,7 @@ module.exports = function (cliArguments) {
     };
 
     generator(targets, scope, (err) => {
+        // TODO: handle the end
         //console.log(err);
     });
 };
