@@ -6,6 +6,12 @@ Built on top of Express.
 
 Inspired by Strapi.
 
+Under heavy development. 
+
+# Version
+
+0.1
+
 
 # Motivation
 
