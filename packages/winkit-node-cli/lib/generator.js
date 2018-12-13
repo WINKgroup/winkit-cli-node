@@ -2,6 +2,12 @@ const {pathRegexp} = require("../lib/util");
 const _ = require('lodash');
 
 const templater = require('./templater');
+/**
+ * From Strapi core: (MIT License)
+ *
+ * Inspired by Strapi
+ *
+ */
 
 module.exports = (targets, scope, cb) => {
 
@@ -37,8 +43,6 @@ module.exports = (targets, scope, cb) => {
                 return false;
             }
         }, keyPath);
-
-        console.log(parsedKeyPath);
 
         if (!parsedKeyPath) {
             return cb(err);

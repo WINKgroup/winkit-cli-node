@@ -21,8 +21,6 @@ module.exports = function (template, options, cb) {
             });
             contents = compiled(options);
 
-            // With Lodash templates, HTML entities are escaped by default.
-            // Default assumption is we don't want that, so we'll reverse it.
             if (!options.escapeHTMLEntities) {
                 contents = _.unescape(contents);
             }

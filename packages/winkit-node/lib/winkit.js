@@ -10,7 +10,6 @@ const port = 3000;
 class Winkit {
 
     constructor(){
-        //super();
         this.app = express();
         this.config = {
             appRootDir : process.cwd(),
